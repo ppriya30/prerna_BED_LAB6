@@ -36,11 +36,8 @@ public class User {
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(
 
-			name = "user_roleId",
-			joinColumns = @JoinColumn(name = "user_id"),
-			inverseJoinColumns = @JoinColumn(name = "role_id")
-			)
-	
+			name = "user_roleId", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+
 	private List<Role> role = new ArrayList<Role>();
 
 }

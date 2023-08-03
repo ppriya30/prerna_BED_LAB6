@@ -17,14 +17,12 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int s_id;
-	
+
 	private String firstName;
 	private String lastName;
 	private String course;
 	private String country;
-	
-	
-	
+
 	public Student(String firstName, String lastName, String course, String country) {
 		super();
 		this.firstName = firstName;
@@ -32,7 +30,5 @@ public class Student {
 		this.course = course;
 		this.country = country;
 	}
-	
-	
 
 }

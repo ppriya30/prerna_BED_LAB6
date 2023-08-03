@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/hello")
 public class festController {
-	
+
 	@GetMapping("/welcome")
 	public String greet() {
-		
+
 		return "welcome";
 	}
 

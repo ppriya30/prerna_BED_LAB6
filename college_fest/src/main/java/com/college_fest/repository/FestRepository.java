@@ -8,8 +8,8 @@ import com.college_fest.model.User;
 
 @Repository
 public interface FestRepository extends JpaRepository<User, Integer> {
-	
-	 @Query("SELECT u FROM User u WHERE u.user_name = ?1")
-	    public User getUserByUsername(String username);
+
+	@Query("SELECT u FROM User u WHERE u.user_name = ?1")
+	public User getUserByUsername(String username);
 
 }

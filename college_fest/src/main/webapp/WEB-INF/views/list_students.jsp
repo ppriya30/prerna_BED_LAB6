@@ -33,10 +33,8 @@
 
 		<!-- Add a button -->
 		<a href="/student/new" class="btn btn-primary btn-sm mb-3"> Add
-			Student </a> 
-			
-		<a href="/logout" class="btn btn-primary btn-sm mb-3 mx-auto">
-			Logout </a>
+			Student </a> <a href="/logout"
+			class="btn btn-primary btn-sm mb-3 mx-auto"> Logout </a>
 
 		</form>
 
@@ -67,9 +65,7 @@
 						<td>
 							<!-- Add "update" button/link --> <a
 							href="/student/update?s_id=${tempstudent.s_id}"
-							class="btn btn-info btn-sm"> Update </a> 
-							
-							<!-- Add "delete" button/link -->
+							class="btn btn-info btn-sm"> Update </a> <!-- Add "delete" button/link -->
 							<a href="/student/delete?del_id=${tempstudent.s_id}"
 							class="btn btn-danger btn-sm"
 							onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">

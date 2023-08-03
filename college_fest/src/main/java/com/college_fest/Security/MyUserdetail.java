@@ -12,22 +12,19 @@ import com.college_fest.model.Role;
 import com.college_fest.model.User;
 
 public class MyUserdetail implements UserDetails {
-	
+
 	User users;
-	
-	public MyUserdetail(User user) {//constructor
-		this.users= user;
+
+	public MyUserdetail(User user) {// constructor
+		this.users = user;
 	}
-	
-	
-	
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		List<Role> roles =users.getRole();//list of User class
+		List<Role> roles = users.getRole();// list of User class
 		List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-		
-		for(Role role : roles) {//user class list roles
+
+		for (Role role : roles) {// user class list roles
 			authorities.add(new SimpleGrantedAuthority(role.getRole_name()));
 		}
 		return authorities;
